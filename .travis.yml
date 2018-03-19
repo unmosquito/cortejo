@@ -15,4 +15,10 @@ before_install:
 
 install: /bin/true
 
-script: ./gradlew clean build --refresh-dependencies
+script:
+  - ./gradlew clean build check --refresh-dependencies
+  - ./gradlew codeCoverageReport
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
