@@ -1,6 +1,6 @@
 package unmosquito.cortejo
 
-import java.util.*
+import java.util.Random
 
 class TupleImpl : Tuple {
     override fun hello() {
